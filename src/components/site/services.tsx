@@ -33,7 +33,8 @@ const SERVICES: Service[] = [
     icon: Tooth,
     title: "Zahnzusatz",
     body: "Schließt Lücken der gesetzlichen Kasse bei Zahnersatz, Kieferorthopädie und professioneller Zahnreinigung.",
-    tint: true,
+    image: "/images/leistungen-zahnzusatz.png",
+    imageAlt: "Artur Butsch lächelt selbstbewusst in die Kamera",
   },
   {
     icon: House,
@@ -53,7 +54,8 @@ const SERVICES: Service[] = [
     icon: Umbrella,
     title: "Haftpflicht",
     body: "Schützt Sie, wenn Sie versehentlich anderen einen Schaden zufügen, privat und beruflich.",
-    tint: true,
+    image: "/images/leistungen-haftpflicht.png",
+    imageAlt: "Artur Butsch hält schützend einen Regenschirm über eine Familie",
   },
   {
     icon: PawPrint,
@@ -133,7 +135,7 @@ export function Services() {
             <Reveal key={service.title} delay={i * 0.05}>
               <div
                 className={cn(
-                  "flex h-full min-h-[19rem] flex-col justify-center rounded-3xl border border-border/70 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5",
+                  "flex h-full min-h-[19rem] flex-col justify-center rounded-3xl border border-border/70 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/10",
                   service.tint && "border-primary/10 bg-primary/[0.06]"
                 )}
               >

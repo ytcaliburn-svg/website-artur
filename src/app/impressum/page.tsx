@@ -13,9 +13,10 @@ export default function ImpressumPage() {
       <Nav />
       <main className="mx-auto max-w-3xl flex-1 px-4 py-20 sm:px-6">
       <p className="mb-8 text-sm text-muted-foreground">
-        Entwurf. Bitte die markierten Angaben ergänzen und vor
-        Veröffentlichung rechtlich prüfen lassen (Pflichtangaben nach § 5
-        TMG und § 11a Abs. 1 VersVermV).
+        Bitte vor Veröffentlichung von einem Anwalt oder Steuerberater
+        prüfen lassen, insbesondere ob eine USt-IdNr. anzugeben ist und ob
+        die Angaben zum Verantwortlichen der ARAG-Geschäftsstelle korrekt
+        zugeordnet sind.
       </p>
 
       <h1 className="text-3xl font-semibold tracking-tight">Impressum</h1>
@@ -28,18 +29,32 @@ export default function ImpressumPage() {
           <p className="mt-2">
             {siteConfig.name}
             <br />
-            [Ladungsfähige Anschrift einfügen]
+            {siteConfig.officeName}
             <br />
-            {siteConfig.addressLine1}, {siteConfig.addressLine2}
+            {siteConfig.addressLine1}
+            <br />
+            {siteConfig.addressLine2}
           </p>
         </section>
 
         <section>
           <h2 className="text-base font-semibold text-foreground">Kontakt</h2>
           <p className="mt-2">
-            Telefon: {siteConfig.phoneDisplay}
+            Mobil: {siteConfig.phoneDisplay}
+            <br />
+            Telefon: {siteConfig.landlineDisplay}
+            <br />
+            Fax: {siteConfig.faxDisplay}
             <br />
             E-Mail: {siteConfig.email}
+            <br />
+            Web:{" "}
+            <a
+              href={siteConfig.website}
+              className="underline underline-offset-3 hover:text-foreground"
+            >
+              {siteConfig.website}
+            </a>
           </p>
         </section>
 
@@ -48,16 +63,19 @@ export default function ImpressumPage() {
             Berufsbezeichnung und berufsrechtliche Angaben
           </h2>
           <p className="mt-2">
-            Berufsbezeichnung: Versicherungsmakler (§ 34d Abs. 1 GewO),
-            verliehen in der Bundesrepublik Deutschland.
+            Berufsbezeichnung: {siteConfig.legalStatus}, verliehen in der
+            Bundesrepublik Deutschland.
           </p>
           <p className="mt-2">
-            Zuständige Aufsichtsbehörde: [Zuständige IHK einfügen]
+            Zuständige Aufsichtsbehörde: DIHK | Deutsche Industrie- und
+            Handelskammer, Breite Straße 29, 10178 Berlin, Telefon 0 180 6
+            00 58 50 (20 Cent/Min. aus dem deutschen Festnetz, höchstens 60
+            Cent/Min. aus Mobilfunknetzen).
           </p>
           <p className="mt-2">
             Eintragung im Versicherungsvermittlerregister unter der
-            Registrierungsnummer [Registrierungsnummer einfügen],
-            prüfbar unter{" "}
+            Registrierungsnummer {siteConfig.ihkRegisterNumber}, prüfbar
+            unter{" "}
             <a
               href="https://www.vermittlerregister.info"
               className="underline underline-offset-3 hover:text-foreground"
@@ -83,6 +101,26 @@ export default function ImpressumPage() {
           </h2>
           <p className="mt-2">
             {siteConfig.name}, Anschrift wie oben.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-base font-semibold text-foreground">
+            Schlichtungsstelle
+          </h2>
+          <p className="mt-2">
+            Versicherungsombudsmann e.V., Postfach 08 06 32, 10006 Berlin
+            <br />
+            Telefon: 0 18 04 22 44 24, Fax: 0 18 04 22 44 25 (höchstens 60
+            Cent/Min. aus Mobilfunknetzen)
+            <br />
+            E-Mail:{" "}
+            <a
+              href="mailto:beschwerde@versicherungsombudsmann.de"
+              className="underline underline-offset-3 hover:text-foreground"
+            >
+              beschwerde@versicherungsombudsmann.de
+            </a>
           </p>
         </section>
 

@@ -28,7 +28,7 @@ const QUOTES = [
 
 export function Testimonials() {
   return (
-    <section className="border-t border-border/70 bg-secondary/30">
+    <section className="border-t border-border bg-primary/[0.05] dark:bg-secondary/30">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <h2 className="max-w-md text-4xl font-semibold tracking-tight md:text-5xl">
@@ -39,7 +39,7 @@ export function Testimonials() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {QUOTES.map((item, i) => (
             <Reveal key={item.name} delay={i * 0.06}>
-              <figure className="flex h-full flex-col rounded-3xl border border-border/70 bg-background p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5">
+              <figure className="flex h-full flex-col rounded-3xl border border-border/70 bg-background p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/10">
                 <Quotes className="size-7 text-primary" weight="fill" />
                 <blockquote className="mt-4 flex-1 text-[0.95rem] leading-relaxed text-foreground">
                   {item.quote}

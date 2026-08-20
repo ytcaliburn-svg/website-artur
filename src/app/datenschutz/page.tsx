@@ -17,7 +17,7 @@ export default function DatenschutzPage() {
         markierten Angaben ergänzen und vor Veröffentlichung von einem
         Datenschutzbeauftragten oder Anwalt prüfen lassen, insbesondere im
         Hinblick auf die Verarbeitung von Gesundheits- und Vertragsdaten als
-        Versicherungsmakler.
+        Versicherungsvermittler.
       </p>
 
       <h1 className="text-3xl font-semibold tracking-tight">
@@ -32,7 +32,7 @@ export default function DatenschutzPage() {
           <p className="mt-2">
             {siteConfig.name}
             <br />
-            [Ladungsfähige Anschrift einfügen]
+            {siteConfig.addressLine1}, {siteConfig.addressLine2}
             <br />
             E-Mail: {siteConfig.email}
             <br />
@@ -100,7 +100,7 @@ export default function DatenschutzPage() {
             Kommt es im Rahmen der Beratung zu einer Vermittlung von
             ARAG-Versicherungsprodukten, verarbeiten wir die dafür
             erforderlichen Vertrags- und gegebenenfalls Gesundheitsdaten im
-            Rahmen der gesetzlichen Vorgaben für Versicherungsmakler.
+            Rahmen der gesetzlichen Vorgaben für Versicherungsvermittler.
             [Details zur Datenweitergabe an die ARAG als Risikoträger und
             zur Rechtsgrundlage nach Art. 9 DSGVO ergänzen.]
           </p>

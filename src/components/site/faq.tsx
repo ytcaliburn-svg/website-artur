@@ -13,7 +13,7 @@ const FAQS = [
   },
   {
     q: "Warum arbeiten Sie nur mit einem Versicherer zusammen?",
-    a: "Weil ich die ARAG-Produkte dadurch besser kenne als jeder Generalist. Passt ARAG nicht zu Ihrer Situation, sage ich Ihnen das ehrlich.",
+    a: "Als ARAG-Vertriebspartner bin ich auf ihre Produkte spezialisiert und kenne sie dadurch im Detail. Passt ARAG nicht zu Ihrer Situation, sage ich Ihnen das ehrlich.",
   },
   {
     q: "Was passiert mit meinem alten Vertrag?",
@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: "Bin ich an einen Vertrag mit Ihnen gebunden?",
-    a: "Nein. Sie können die Maklervollmacht jederzeit formlos widerrufen.",
+    a: "Nein. Sie können die Zusammenarbeit jederzeit formlos beenden.",
   },
   {
     q: "Wie schnell bekomme ich eine Antwort?",

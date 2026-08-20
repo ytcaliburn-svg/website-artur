@@ -15,10 +15,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Artur Butsch | Ihr ARAG-Vertriebspartner";
+const description =
+  "Persönliche Beratung als ARAG-Vertriebspartner. Rechtsschutz, Kranken- und Zahnzusatz, Unfall, Haftpflicht und mehr, persönlich betreut von Artur Butsch.";
+
 export const metadata: Metadata = {
-  title: "Artur Butsch | Ihr ARAG Versicherungsmakler",
-  description:
-    "Unabhängige Beratung, exklusiv auf ARAG-Versicherungen spezialisiert. Rechtsschutz, Kranken- und Zahnzusatz, Unfall, Haftpflicht und mehr, persönlich betreut von Artur Butsch.",
+  // TODO: auf die echte Domain setzen, sobald die Seite gehostet ist,
+  // sonst lösen geteilte Links (WhatsApp, Facebook, ...) das Vorschaubild nicht auf.
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://deine-domain.de"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    locale: "de_DE",
+    type: "website",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

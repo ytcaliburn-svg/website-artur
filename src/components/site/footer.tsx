@@ -14,7 +14,7 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border/70">
+    <footer className="border-t border-border">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <div className="flex flex-col justify-between gap-10 sm:flex-row">
           <div className="max-w-xs">
@@ -25,8 +25,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Unabhängiger Versicherungsmakler, ausschließlich für
-              ARAG-Produkte.
+              {siteConfig.tagline}, {siteConfig.officeName}.
             </p>
           </div>
 
@@ -59,8 +58,8 @@ export function Footer() {
         </div>
 
         <p className="mt-10 border-t border-border/70 pt-6 text-xs text-muted-foreground">
-          © {year} {siteConfig.name}. Vermittlung ausschließlich für
-          ARAG-Produkte gemäß § 34d Abs. 1 GewO.
+          © {year} {siteConfig.name}. {siteConfig.legalStatus}. IHK-Register-Nr.{" "}
+          {siteConfig.ihkRegisterNumber}.
         </p>
       </div>
     </footer>

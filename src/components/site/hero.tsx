@@ -40,9 +40,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.08, ease: EASE_OUT }}
             className="mt-5 max-w-[46ch] text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            Als unabhängiger ARAG-Makler berate ich Sie persönlich zu
+            Als ARAG-Vertriebspartner berate ich Sie persönlich zu
             Rechtsschutz, Kranken- und Zahnzusatz, Unfall und Haftpflicht,
-            ganz ohne Vertreterdruck.
+            ganz ohne Fachchinesisch.
           </motion.p>
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 18 }}
@@ -134,7 +134,7 @@ export function Hero() {
                     },
                   }
             }
-            className="absolute -bottom-5 left-5 flex items-center gap-2.5 rounded-2xl border border-border/70 bg-background/90 px-4 py-3 shadow-lg shadow-foreground/5 backdrop-blur-md sm:left-8"
+            className="absolute -bottom-5 left-5 flex items-center gap-2.5 rounded-2xl border border-border/70 bg-background/90 px-4 py-3 shadow-lg shadow-foreground/10 backdrop-blur-md sm:left-8"
           >
             <ShieldCheck className="size-5 shrink-0 text-primary" weight="fill" />
             <span className="text-sm font-medium">Exklusiver ARAG-Partner</span>

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { List, X } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { LogoMark } from "@/components/site/logo-mark"
+import { ThemeToggle } from "@/components/site/theme-toggle"
 import { siteConfig } from "@/lib/site-config"
 
 const LINKS = [
@@ -39,21 +40,25 @@ export function Nav() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
           <Button size="sm" nativeButton={false} render={<Link href="/#kontakt" />}>
             {siteConfig.ctaLabel}
           </Button>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Menü schließen" : "Menü öffnen"}
-          aria-expanded={open}
-          className="flex size-9 items-center justify-center rounded-lg text-foreground transition-transform active:scale-95 lg:hidden"
-        >
-          {open ? <X className="size-5" /> : <List className="size-5" />}
-        </button>
+        <div className="flex items-center gap-1 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Menü schließen" : "Menü öffnen"}
+            aria-expanded={open}
+            className="flex size-9 items-center justify-center rounded-lg text-foreground transition-transform active:scale-95"
+          >
+            {open ? <X className="size-5" /> : <List className="size-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (

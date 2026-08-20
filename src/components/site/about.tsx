@@ -1,18 +1,30 @@
 import Image from "next/image"
 import { Reveal } from "@/components/site/reveal"
+import { siteConfig } from "@/lib/site-config"
 
 export function About() {
   return (
-    <section id="ueber-mich" className="border-t border-border/70 bg-secondary/30">
+    <section id="ueber-mich" className="border-t border-border bg-primary/[0.05] dark:bg-secondary/30">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-2 lg:gap-16">
-        <Reveal className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-muted lg:order-2">
-          <Image
-            src="/images/about-portrait.png"
-            alt="Portrait von Artur Butsch"
-            fill
-            sizes="(min-width: 1024px) 45vw, 90vw"
-            className="object-cover"
-          />
+        <Reveal className="relative lg:order-2">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-muted">
+            <Image
+              src="/images/about-portrait.png"
+              alt="Portrait von Artur Butsch"
+              fill
+              sizes="(min-width: 1024px) 45vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-8 -left-6 hidden aspect-[4/3] w-[45%] overflow-hidden rounded-2xl border-4 border-secondary bg-muted shadow-xl sm:block">
+            <Image
+              src="/images/extra-schreibtisch.png"
+              alt="Artur Butsch bei der Arbeit im Büro"
+              fill
+              sizes="20vw"
+              className="object-cover"
+            />
+          </div>
         </Reveal>
 
         <Reveal delay={0.08} className="lg:order-1">
@@ -37,7 +49,7 @@ export function About() {
             Artur Butsch
           </p>
           <p className="text-sm text-muted-foreground">
-            Eingetragener Versicherungsmakler, §34d GewO
+            {siteConfig.tagline} · {siteConfig.legalStatus}
           </p>
         </Reveal>
       </div>

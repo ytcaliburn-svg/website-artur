@@ -1,14 +1,17 @@
-/**
- * Placeholder contact details. Replace with real values before launch,
- * this is the only file that needs editing to update them site-wide.
- */
 export const siteConfig = {
   name: "Artur Butsch",
-  tagline: "ARAG Versicherungsmakler",
+  tagline: "ARAG-Vertriebspartner",
   ctaLabel: "Beratung anfragen",
-  email: "kontakt@abutsch.de",
-  phone: "+491789422343",
-  phoneDisplay: "+49 178 9422343",
-  addressLine1: "Musterstraße 1",
-  addressLine2: "00000 Musterstadt",
+  email: "artur.butsch@arag-partner.de",
+  phone: "+4917894 22343",
+  phoneDisplay: "+49 178 94 22 343",
+  landlineDisplay: "0551 389 04 30",
+  landline: "+49551389 0430",
+  faxDisplay: "0551 389 04 325",
+  website: "https://www.arag-partner.de/artur-butsch/",
+  officeName: "ARAG Hauptgeschäftsstelle Göttingen – Holzminden",
+  addressLine1: "Wiesenstraße 1",
+  addressLine2: "37073 Göttingen",
+  legalStatus: "Gebundener Versicherungsvermittler nach § 34d Abs. 7 Nr. 1 GewO",
+  ihkRegisterNumber: "D-PIFN-89Q2T-88",
 }

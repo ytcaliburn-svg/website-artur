@@ -1,11 +1,11 @@
-import { HandCoins, PhoneCall, ShieldCheck } from "@phosphor-icons/react/dist/ssr"
+import { HandCoins, PhoneCall, SealCheck } from "@phosphor-icons/react/dist/ssr"
 import { Reveal } from "@/components/site/reveal"
 
 const PILLARS = [
   {
-    icon: ShieldCheck,
-    title: "Unabhängige Beratung",
-    body: "Ich vertrete Sie, nicht den Konzern. Jede Empfehlung passt zu Ihrer Situation, nicht zu einer Vertriebsquote.",
+    icon: SealCheck,
+    title: "Ehrliche Beratung",
+    body: "Sie erfahren immer, was ein Tarif wirklich leistet, auch wenn die Antwort mal „das brauchen Sie nicht“ lautet.",
   },
   {
     icon: HandCoins,
@@ -21,7 +21,7 @@ const PILLARS = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-border/70 bg-secondary/40">
+    <section className="border-y border-border bg-primary/[0.05] dark:bg-secondary/40">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 md:gap-8">
         {PILLARS.map((pillar, i) => (
           <Reveal key={pillar.title} delay={i * 0.06}>
