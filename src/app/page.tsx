@@ -1,4 +1,5 @@
 import { Nav } from "@/components/site/nav"
+import { PageTransition } from "@/components/site/page-transition"
 import { Hero } from "@/components/site/hero"
 import { TrustBar } from "@/components/site/trust-bar"
 import { Services } from "@/components/site/services"
@@ -14,14 +15,16 @@ export default function Home() {
     <>
       <Nav />
       <main className="flex-1">
-        <Hero />
-        <TrustBar />
-        <Services />
-        <About />
-        <Process />
-        <Testimonials />
-        <Faq />
-        <Contact />
+        <PageTransition>
+          <Hero />
+          <TrustBar />
+          <Services />
+          <About />
+          <Process />
+          <Testimonials />
+          <Faq />
+          <Contact />
+        </PageTransition>
       </main>
       <Footer />
     </>
