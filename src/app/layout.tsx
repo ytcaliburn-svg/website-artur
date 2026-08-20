@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollProgress } from "@/components/site/scroll-progress";
 import { Toaster } from "@/components/ui/sonner";
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,9 +16,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Artur Butsch | Ihr ARAG-Vertriebspartner";
+const title = "Artur Butsch | ARAG-Vertriebspartner in Göttingen";
 const description =
-  "Persönliche Beratung als ARAG-Vertriebspartner. Rechtsschutz, Kranken- und Zahnzusatz, Unfall, Haftpflicht und mehr, persönlich betreut von Artur Butsch.";
+  "Persönliche Versicherungsberatung in Göttingen als ARAG-Vertriebspartner: Rechtsschutz, Kranken- und Zahnzusatz, Unfall, Haftpflicht und mehr. Direkt, ehrlich, ohne Umwege.";
 
 export const metadata: Metadata = {
   // TODO: auf die echte Domain setzen, sobald die Seite gehostet ist,
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://deine-domain.de"),
   title,
   description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title,
     description,
@@ -40,6 +44,27 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  name: `${siteConfig.name} – ${siteConfig.tagline}`,
+  image: "/images/og-image.jpg",
+  telephone: siteConfig.phone.replace(/\s/g, ""),
+  email: siteConfig.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.addressLine1,
+    addressLocality: "Göttingen",
+    postalCode: "37073",
+    addressCountry: "DE",
+  },
+  areaServed: "Göttingen",
+  founder: {
+    "@type": "Person",
+    name: siteConfig.name,
+  },
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -48,6 +73,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
