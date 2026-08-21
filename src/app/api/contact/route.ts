@@ -35,8 +35,8 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY)
 
   const { error } = await resend.emails.send({
-    from: process.env.RESEND_FROM_EMAIL ?? "Kontaktformular <onboarding@resend.dev>",
-    to: process.env.CONTACT_FORM_TO_EMAIL ?? siteConfig.email,
+    from: process.env.RESEND_FROM_EMAIL?.trim() || "Kontaktformular <onboarding@resend.dev>",
+    to: process.env.CONTACT_FORM_TO_EMAIL?.trim() || siteConfig.email,
     replyTo: email,
     subject: `Neue Anfrage von ${name}`,
     text: [
