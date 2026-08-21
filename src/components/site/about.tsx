@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { AiImageTag } from "@/components/site/ai-image-tag"
 import { Reveal } from "@/components/site/reveal"
 import { siteConfig } from "@/lib/site-config"
 
@@ -15,6 +16,7 @@ export function About() {
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
             />
+            <AiImageTag className="right-3 top-3" />
           </div>
           <div className="absolute -bottom-8 -left-6 hidden aspect-[4/3] w-[45%] overflow-hidden rounded-2xl border-4 border-secondary bg-muted shadow-xl sm:block">
             <Image
@@ -24,6 +26,7 @@ export function About() {
               sizes="20vw"
               className="object-cover"
             />
+            <AiImageTag className="right-1.5 top-1.5 px-1.5 py-0.5 text-[8px]" />
           </div>
         </Reveal>
 

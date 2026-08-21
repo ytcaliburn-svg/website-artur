@@ -1,6 +1,7 @@
 import { ViewTransition } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { AiImageTag } from "@/components/site/ai-image-tag"
 import { Reveal } from "@/components/site/reveal"
 import { SERVICES } from "@/lib/services-data"
 import { cn } from "@/lib/utils"
@@ -50,6 +51,7 @@ export function Services() {
                 />
               </ViewTransition>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+              <AiImageTag className="right-3 top-3" />
               <div className="relative p-6">
                 <service.icon
                   className={cn("text-white/90", service.featured ? "size-8" : "size-6")}

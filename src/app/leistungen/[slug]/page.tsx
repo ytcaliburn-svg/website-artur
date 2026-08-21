@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLeft, ArrowRight, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
+import { AiImageTag } from "@/components/site/ai-image-tag"
 import { Nav } from "@/components/site/nav"
 import { Footer } from "@/components/site/footer"
 import { PageTransition } from "@/components/site/page-transition"
@@ -92,6 +93,7 @@ export default async function ServicePage({
                   className="object-cover"
                 />
               </ViewTransition>
+              <AiImageTag className="right-3 top-3" />
             </div>
           </div>
         </section>
@@ -148,6 +150,7 @@ export default async function ServicePage({
                     />
                   </ViewTransition>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+                  <AiImageTag className="right-2.5 top-2.5 px-1.5 py-0.5 text-[9px]" />
                   <div className="relative p-5">
                     <h3 className="text-base font-semibold text-white">{other.title}</h3>
                   </div>

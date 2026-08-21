@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useRef } from "react"
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react"
 import { ArrowRight, ShieldCheck } from "@phosphor-icons/react"
+import { AiImageTag } from "@/components/site/ai-image-tag"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-config"
 
@@ -112,6 +113,7 @@ export function Hero() {
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
             />
+            <AiImageTag className="right-3 top-3" />
           </div>
 
           <motion.div

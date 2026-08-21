@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react/dist/ssr"
+import { AiImageTag } from "@/components/site/ai-image-tag"
 import { ContactForm } from "@/components/site/contact-form"
 import { Reveal } from "@/components/site/reveal"
 import { siteConfig } from "@/lib/site-config"
@@ -49,6 +50,7 @@ export function Contact() {
               sizes="(min-width: 1024px) 30vw, 50vw"
               className="object-cover"
             />
+            <AiImageTag className="right-3 top-3" />
           </div>
         </Reveal>
 
